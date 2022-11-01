@@ -1,0 +1,9 @@
+two types 
+# depends # build check image
+- stage: 'Deploy_PROD'
+  displayName: Deploy qa
+  dependsOn: Build
+# depends # Deploy_DEV check stages images 
+- stage: 'Deploy_QA'
+  displayName: 'Deploy qa'
+  dependsOn: 'Deploy_DEV'
